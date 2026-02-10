@@ -1,0 +1,141 @@
+:root {
+  --btn-font: monospace;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+.grid-wrapper {
+  display: grid;
+}
+
+header {
+  height: 15vh;
+  display: grid;
+  color: lime;
+  /* padding: 3%; */
+}
+
+footer {
+  background-color: gainsboro;
+  height: 15vh;
+}
+
+#canvasContainer {
+  margin:0 auto;
+  width: 70%;
+  height: 70vh;
+  border: 2px solid red;
+}
+
+canvas {
+  border: 2px solid green;
+}
+
+dialog {
+  width: 70%;
+  padding: 1rem;
+  top: 40%;
+  /* margin: auto; */
+  border: none;
+  background-color: rgba(120, 120, 120, 0.8);
+  border-radius: 2rem;
+}
+
+#userForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+dialog input,
+dialog select {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 49%;
+}
+.form-btns {
+  width: 49%;
+}
+
+#login {
+  width: 18%;
+  min-width: 270px;
+  justify-self: right;
+}
+
+button {
+  font: 600 1.5rem var(--btn-font);
+  padding: 1rem 1.25rem;
+  border: none;
+  background-color: black;
+  box-shadow: 3px 3px 3px rgb(88, 85, 85), inset 2px 2px 2px rgb(88, 85, 85);
+}
+
+#register {
+  border-radius: 10px 25px;
+  color: lime;
+}
+
+.confirm {
+  border-radius: 25% 15px;
+  color: rgb(85, 230, 255);
+}
+
+.cancel {
+  border-radius: 15px 25%;
+  color: rgb(250, 30, 30);
+}
+
+.secondary {
+  border-radius: 15px 15px 25% 25%;
+  color: lime;
+}
+
+.erroredField::placeholder{
+  color: red;
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn-flex-clm {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(88, 85, 85), inset 2px 2px 2px rgb(88, 85, 85);
+}
+
+/* player dashboard */
+#savedGames {
+  height: 50vh;
+  overflow-y: scroll;
+  color: rgb(85, 230, 255);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: space-between;
+}
+
+.gameContainer {
+  background-color: black;
+  min-width: 230px;
+  padding: 8px;
+  width: 24%;
+  border-radius: 15px;
+}

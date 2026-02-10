@@ -1,0 +1,419 @@
+/* TODO  change all classnames to not interfere with other sheets */
+
+/* reset */
+* {
+  padding: 0;
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+:root {
+  /*! colors */
+  /* neons */
+  --neon-blue: rgb(0, 255, 225);
+  --neon-green: rgb(0, 255, 0);
+  --neon-pink: rgb(255, 100, 200);
+  --neon-orange: rgb(255, 150, 0);
+  --neon-yellow: rgb(255, 200, 0);
+
+  /* greys */
+  --concrete-main: rgb(120, 120, 120);
+  --concrete-dark: rgb(45, 50, 50);
+  --concrete-light: rgb(155, 150, 150);
+  --steel-main: ;
+  --steel-dark: ;
+  --steel-light: ;
+
+  /* leds */
+  --led-green: ;
+  --led-red: ;
+  --led-white: ;
+
+  /* play fonts */
+  --pc-text: ;
+  --info-text: ;
+}
+
+/* ! Customs */
+/* custom fonts */
+@font-face {
+  font-family: Beonheard;
+  src: url("../fonts/Beornheard/BEORNHEARD.otf");
+}
+@font-face {
+  font-family: "Echizen-Swash";
+  src: url("../fonts/Echizen/Echizen - Swash.otf");
+}
+@font-face {
+  font-family: Twigs;
+  src: url("../fonts/Twigs/Twigs.otf");
+}
+
+/* custom properties for animations */
+/* Green values */
+@property --ds1v {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: -10px;
+}
+@property --ds1h {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: -10px;
+}
+@property --ds1blur {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 12px;
+}
+@property --green {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #00ff00;
+}
+
+/* Blue values */
+@property --ds2v {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 10px;
+}
+@property --ds2h {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 10px;
+}
+@property --ds2blur {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 12px;
+}
+@property --blue {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(0, 255, 225);
+}
+
+/* Orange values */
+@property --ds3v {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+@property --ds3h {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+@property --ds3blur {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 5px;
+}
+@property --orange {
+  syntax: "<color>";
+  ingerits: true;
+  initial-value: rgb(255, 150, 0);
+}
+
+/* ! Small */
+/* container */
+.mini {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  height: 10vw;
+}
+
+/* both spinners */
+.react,
+#O {
+  animation: spinor 6s linear infinite;
+  filter: drop-shadow(3px 3px 5px var(--neon-pink))
+    drop-shadow(-3px -3px 5px var(--neon-yellow));
+}
+
+/* lil spinner */
+.react {
+  width: 85%;
+  position: absolute;
+  right: -33%;
+}
+
+/* letters on top */
+#R,
+#C {
+  position: relative;
+  z-index: 1;
+}
+
+/* "R" */
+#R {
+  font-family: Twigs;
+  font-size: 6vw;
+  filter: drop-shadow(0 0 4px var(--neon-yellow))
+    drop-shadow(2px 2px 2px var(--neon-blue))
+    drop-shadow(-2px -2px 2px var(--neon-green));
+  text-shadow: 0 0 2px var(--neon-orange);
+}
+
+/* concrete */
+#C,
+.core {
+  font-family: Beonheard;
+  color: var(--concrete-main);
+  text-shadow: 1px 1px var(--concrete-dark), 2px 2px var(--concrete-dark),
+    3px 3px var(--concrete-dark), -1px -1px var(--concrete-light);
+}
+
+/* "C" */
+#C {
+  font-size: 8vw;
+  top: -7.5%;
+}
+
+/* ! Large */
+/* background */
+.pic {
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  width: 98vw;
+  height: 98vh;
+  margin: auto;
+  background-image: url("/images/reactor2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container */
+#whole-logo {
+  width: fit-content;
+  text-align: center;
+  /* display: grid; */
+  /* grid-template-rows: 5fr 2fr; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* place-content: center; */
+}
+
+/* swashes */
+.accent {
+  font-family: "Echizen-Swash";
+}
+
+/* "Reactor" container */
+.reactor {
+  width: 100%;
+  position: relative;
+  bottom: 30%;
+  right: 20%;
+  /* grid-column: 1/3; */
+  /* text-align: center; */
+  /* margin-top: 5%; */
+  /* margin-left: 10%; */
+}
+
+/* "Reactor" text */
+.radioactive {
+  font-family: Twigs;
+  font-weight: 400;
+  font-size: 14vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* separating the letters and the swash */
+.front,
+.mid,
+.end,
+#bolt {
+  filter: drop-shadow(0 0 5px var(--neon-yellow))
+    drop-shadow(var(--ds1v) var(--ds1h) var(--ds1blur) var(--green))
+    drop-shadow(var(--ds2v) var(--ds2h) var(--ds2blur) var(--blue));
+  text-shadow: var(--ds3v) var(--ds3h) var(--ds3blur) var(--orange);
+}
+
+.front {
+  animation: ooze 4s linear infinite alternate;
+}
+.mid {
+  animation: ooze2 3.5s linear infinite alternate;
+}
+.end {
+  animation: ooze 3s linear infinite alternate-reverse;
+}
+
+/* "Core" container */
+#coreW {
+  width: 100%;
+  position: relative;
+  bottom: 25%;
+  left: 7%;
+  /* grid-row: 2/3; */
+  /* grid-column: 2/4; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* "Core" text */
+.core {
+  width: fit-content;
+  font-size: 20vw;
+  letter-spacing: -0.5rem;
+  margin-bottom: 1rem;
+  /* position: relative; */
+  /* bottom: 120%; */
+}
+
+/* big spinner */
+#O {
+  width: 25%;
+}
+
+/* bottom swash */
+#bolt {
+  font-size: 26vw;
+  line-height: 0;
+  margin-top: -18%;
+  animation: ooze2 3.5s ease-in infinite alternate;
+}
+
+/*! keyframes */
+/* drop-shadow green stuff */
+@keyframes ooze {
+  0% {
+    --ds1v: -10px;
+    --ds1h: 0px;
+    --ds1blur: 3px;
+    --green: rgb(0, 255, 0);
+    --ds2v: 10px;
+    --ds2h: 0px;
+    --ds2blur: 9px;
+    --blue: rgb(0, 255, 255);
+    --ds3v: 0px;
+    --ds3h: 3px;
+    --ds3blur: 2px;
+    --orange: rgb(255, 180, 0);
+  }
+  33% {
+    --ds1v: 0px;
+    --ds1h: 10px;
+    --ds1blur: 6px;
+    --green: rgb(100, 255, 0);
+    --ds2v: 0px;
+    --ds2h: -10px;
+    --ds2blur: 3px;
+    --blue: rgb(0, 255, 200);
+    --ds3v: -3px;
+    --ds3h: 0px;
+    --ds3blur: 4px;
+    --orange: rgb(225, 200, 0);
+  }
+  66% {
+    --ds1v: 10px;
+    --ds1h: 0px;
+    --ds1blur: 3px;
+    --green: rgb(200, 255, 0);
+    --ds2v: -10px;
+    --ds2h: 0px;
+    --ds2blur: 9px;
+    --blue: rgb(0, 255, 100);
+    --ds3v: 0px;
+    --ds3h: -3px;
+    --ds3blur: 2px;
+    --orange: rgb(255, 150, 0);
+  }
+  100% {
+    --ds1v: 0px;
+    --ds1h: -10px;
+    --ds1blur: 9px;
+    --green: rgb(0, 255, 100);
+    --ds2v: 0px;
+    --ds2h: 10px;
+    --ds2blur: 3px;
+    --blue: rgb(0, 255, 200);
+    --ds3v: 3px;
+    --ds3h: 0px;
+    --ds3blur: 4px;
+    --orange: rgb(225, 200, 0);
+  }
+}
+
+/* more green stuff */
+@keyframes ooze2 {
+  0% {
+    --ds1v: 0px;
+    --ds1h: -10px;
+    --ds1blur: 3px;
+    --green: rgb(0, 255, 0);
+    --ds2v: 0px;
+    --ds2h: 10px;
+    --ds2blur: 9px;
+    --blue: rgb(0, 255, 255);
+    --ds3v: 3px;
+    --ds3h: 0px;
+    --ds3blur: 2px;
+    --orange: rgb(225, 200, 0);
+  }
+  33% {
+    --ds1v: -10px;
+    --ds1h: 0px;
+    --ds1blur: 6px;
+    --green: rgb(100, 255, 0);
+    --ds2v: 10px;
+    --ds2h: 0px;
+    --ds2blur: 3px;
+    --blue: rgb(0, 255, 200);
+    --ds3v: 0px;
+    --ds3h: -3px;
+    --ds3blur: 4px;
+    --orange: rgb(255, 150, 0);
+  }
+  66% {
+    --ds1v: 0px;
+    --ds1h: 10px;
+    --ds1blur: 3px;
+    --green: rgb(200, 255, 0);
+    --ds2v: 0px;
+    --ds2h: -10px;
+    --ds2blur: 9px;
+    --blue: rgb(0, 255, 100);
+    --ds3v: -3px;
+    --ds3h: 0px;
+    --ds3blur: 2px;
+    --orange: rgb(225, 200, 0);
+  }
+  100% {
+    --ds1v: 10px;
+    --ds1h: 0px;
+    --ds1blur: 9px;
+    --green: rgb(0, 255, 100);
+    --ds2v: -10px;
+    --ds2h: 0px;
+    --ds2blur: 3px;
+    --blue: rgb(0, 255, 200);
+    --ds3v: 0px;
+    --ds3h: 3px;
+    --ds3blur: 4px;
+    --orange: rgb(255, 150, 0);
+  }
+}
+
+/* spinning picture */
+@keyframes spinor {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
