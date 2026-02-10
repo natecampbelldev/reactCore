@@ -1,19 +1,32 @@
 {
-  "name": "dbreactcore",
+  "name": "complete-bp",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "version": "1.0.0",
-  "description": "API for ReactCore comms with DB",
-  "main": "routes/index.js",
   "scripts": {
-    "dev": "node --watch routes/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "author": "Nate Campbell / Matt Coon",
-  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.1",
-    "mongodb": "^6.9.0",
-    "mongoose": "^8.7.1"
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.3.1",
+    "react-router": "^6.25.1",
+    "react-router-dom": "^6.25.1",
+    "@react-three/fiber": "8.17.10",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.4"
   }
 }
